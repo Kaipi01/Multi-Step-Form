@@ -1,0 +1,25 @@
+{
+  "name": "multi-step-form",
+  "version": "1.0.0",
+  "description": "![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)",
+  "main": "stylelint.config.js",
+  "scripts": {
+    "compile:sass": "sass --watch src/scss:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaipi01/Multi-Step-Form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaipi01/Multi-Step-Form/issues"
+  },
+  "homepage": "https://github.com/Kaipi01/Multi-Step-Form#readme",
+  "devDependencies": {
+    "sass": "^1.56.2",
+    "stylelint": "^14.16.0",
+    "stylelint-config-property-sort-order-smacss": "^9.0.0"
+  }
+}
