@@ -16,6 +16,9 @@
 .prettierignore
 .cache
 
+node_modules/
+dist/
+
 README-template.md
 style-guide.md
 
