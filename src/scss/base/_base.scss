@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,4 +10,5 @@
     display: grid;
     min-height: 100vh;
     place-items: center;
+    background-color: $Light-Gray;
   }
