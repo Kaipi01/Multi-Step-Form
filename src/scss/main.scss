@@ -1,4 +1,5 @@
-@use "./utils/variables" as *;
+@use "./base/variables" as *;
+@use "./base/base";
 @use "./utils/visually-hidden" as *;
 @use "./components/form";
 @use "./components/table";
@@ -8,14 +9,4 @@
 @use "./layout/step";
 @use "./layout/thanks";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,500&display=swap');
