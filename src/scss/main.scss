@@ -1,0 +1,21 @@
+@use "./utils/variables" as *;
+@use "./utils/visually-hidden" as *;
+@use "./components/form";
+@use "./components/table";
+@use "./layout/nav";
+@use "./layout/ons";
+@use "./layout/plan";
+@use "./layout/step";
+@use "./layout/thanks";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
