@@ -3,123 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="../dist/main.css">
-  <script defer type="module" src="./js/main.js"></script>
   <title>Frontend Mentor | Multi-step form</title>
 </head>
 <body>
-  <main>
-    <div>
-      <div>
-        <button>1</button>
-        <p>
-          <span>Step 1</span>
+  <main class="content">
+    <h1 class="content__h1">Buy monthly subscriptions</h1>
+    <nav class="nav">
+        <button class="nav__btn" id="step1" role="radio" aria-checked="true">
+          <span>go to step number </span>1
+        </button>
+        <label class="nav__label" for="step1">
+          <span class="nav__label-nr">Step 1</span>
           Your info
-        </p>
-      </div>
-      <div>
-        <button>2</button>
-        <p>
-          <span>Step 2</span>
+        </label>
+
+        <button role="radio" aria-checked="false" disabled>
+          <span>go to step number </span>2
+        </button>
+        <label class="nav__label" for="step2">
+          <span class="nav__label-nr" id="step2">Step 2</span>
           Select Plan
-        </p>
-      </div>
-      <div>
-        <button>3</button>
-        <p>
-          <span>Step 3</span>
+        </label>
+
+        <button role="radio" aria-checked="false" disabled><span>
+          go to step number </span>3
+        </button>
+        <label class="nav__label" for="step3">
+          <span class="nav__label-nr" id="step3">Step 3</span>
           Add-ONS
-        </p>
-      </div>
-      <div>
-        <button>4</button>
-        <p>
-          <span>Step 4</span>
+        </label>
+
+        <button role="radio" aria-checked="false" disabled>
+          <span>go to step number </span>4
+        </button>
+        <label class="nav__label" for="step4">
+          <span class="nav__label-nr" id="step4">Step 4</span>
           Summary
-        </p>
-      </div>
-    </div>
-    <button>Go Back</button>
-    <button>Next Step</button>
-    <article>
-      <h2>Personal info</h2>
-      <p>Please provide your name, email address and phone number.</p>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="e.g. Stephen King">
+        </label>
+    </nav>
+    <article class="step">
+      <h2 class="step__title">Personal info</h2>
+      <p class="step__title-sub">Please provide your name, email address and phone number.</p>
+      <form class="form">
+        <label class="form__label" for="name">Name</label>
+        <p class="form__alert" role="alert">This field is required</p>
+        <input class="form__input" type="text" name="name" id="name" placeholder="e.g. Stephen King">
 
         <label for="email">Email Address</label>
+        <p class="form__alert" role="alert">This field is required</p>
         <input type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
 
         <label for="phone-number">Phone Number</label>
+        <p class="form__alert" role="alert">This field is required</p>
         <input type="tel" name="phone-number" id="phone-number" placeholder="e.g. +1 234 567 890">
       </form>
     </article>
-    <article>
-      <h2>Select your plan</h2>
-      <p>You have the option of monthly or yearly billing.</p>
-      <button role="radio">
-        <img src="./assets/images/icon-arcade.svg" alt="icon arcade">
+    <article class="step">
+      <h2 class="step__title">Select your plan</h2>
+      <p class="step__title-sub">You have the option of monthly or yearly billing.</p>
+
+      <button class="plan__btn" role="radio" aria-checked="true">
+        <img class="plan__btn-img" src="./assets/images/icon-arcade.svg" alt="icon arcade">
         Arcade 
-        <span>$9/mo</span>
+        <span class="plan__btn-info">
+          <abbr title="Nine dollars per month">$9/mo</abbr>
+        </span>
       </button>
-      <button role="radio">
-        <img src="./assets/images/icon-advanced.svg" alt="icon game pad">
+
+      <button class="plan__btn" aria-checked="false" role="radio">
+        <img class="plan__btn-img" src="./assets/images/icon-advanced.svg" alt="icon game pad">
         Advanced 
-        <span>$12/mo</span>
+        <span class="plan__btn-info">
+          <abbr title="Twelve dollars per month">$12/mo</abbr>
+        </span>
       </button>
-      <button role="radio">
-        <img src="./assets/images/icon-pro.svg" alt="icon game pad">
+
+      <button class="plan__btn" aria-checked="false" role="radio">
+        <img class="plan__btn-img" src="./assets/images/icon-pro.svg" alt="icon game pad">
         Pro 
-        <span>$15/mo</span>
+        <span class="plan__btn-info">
+          <abbr title="Fifteen dollars per month">$15/mo</abbr>
+        </span>
       </button>
+
       <div>
         <p>Monthly</p>
-        <button role="switch"></button>
-        <p>Yearly</p>
+        <button class="plan__switch" type="button" aria-checked="false" role="switch">
+          <span class="plan__switch-desciption">Change billing to Yearly</span>
+        </button>
+        <p aria-hidden="true">Yearly</p>
       </div>
     </article>
-    <article>
-      <h2>Pick add-ons</h2>
-      <p>Add-ons help enhance your gaming experience.</p>
+    <article class="step">
+      <h2 class="step__title">Pick add-ons</h2>
+      <p class="step__title-sub">Add-ons help enhance your gaming experience.</p>
 
-      <button role="checkbox">
-        <span aria-hidden="true"></span>
+      <button class="ons__btn" aria-checked="false" role="checkbox">
+        <span class="ons__btn-square" aria-hidden="true"></span>
+        <img class="ons__btn-square-icon" src="./assets/images/icon-checkmark.svg" alt="checkmark">
         <span>
-          <strong>Online service</strong>
-          <span>Access to multiplayer games</span>
+          <strong class="ons__name">Online service</strong>
+          <span class="ons__desciption">Access to multiplayer games</span>
         </span>
-        <span>+$1/mo</span>
+        <span class="ons__price">+
+          <abbr class="ons__price-abbr" title="One dollar per month">$1/mo</abbr>
+        </span>
       </button>
 
-      <button role="checkbox">
-        <span aria-hidden="true"></span>
+      <button class="ons__btn" aria-checked="false" role="checkbox">
+        <span class="ons__btn-square" aria-hidden="true"></span>
+        <img class="ons__btn-square-icon" src="./assets/images/icon-checkmark.svg" alt="checkmark">
         <span>
-          <strong>Larger storage</strong>
-          <span>Extra 1TB of cloud save</span>
+          <strong class="ons__name">Larger storage</strong>
+          <span class="ons__desciption">Extra 1TB of cloud save</span>
         </span>
-        <span>+$2/mo</span>
+        <span class="ons__price">+
+          <abbr class="ons__price-abbr" title="Two dollars per month">$2/mo</abbr>
+        </span>
       </button>
 
-      <button role="checkbox">
-        <span aria-hidden="true"></span>
+      <button class="ons__btn" aria-checked="false" role="checkbox">
+        <span class="ons__btn-square" aria-hidden="true"></span>
+        <img class="ons__btn-square-icon" src="./assets/images/icon-checkmark.svg" alt="checkmark">
         <span>
-          <strong>Customizable Profile</strong>
-          <span>Custom theme on your profile</span>
+          <strong class="ons__name">Customizable Profile</strong>
+          <span class="ons__desciption">Custom theme on your profile</span>
         </span>
-        <span>+$2/mo</span>
+        <span class="ons__price">+
+          <abbr class="ons__price-abbr" title="Two dollars per month">$2/mo</abbr></span>
       </button>
+
     </article>
-    <article>
-      <h2>Finishing up</h2>
-      <p>Double-check everything looks OK before confirming.</p>
+    <article class="step">
+      <h2 class="step__title">Finishing up</h2>
+      <p class="step__title-sub">Double-check everything looks OK before confirming.</p>
 
-      <div></div>
-      
-      <p>Total (per month)</p>
-      <p>+$12/mo</p>
+      <table class="table">
+        <tr>
+          <th class="table__header">Product</th>
+          <th class="table__header">Price</th>
+        </tr>
+        <tr>
+          <td class="table__data"><strong>Arcade (Monthly)</strong>
+            <a href="#">Change</a>
+          </td>
+          <td class="table__data">
+            <abbr class="table__data-abbr" title="Nine dollars per month">$9/mo</abbr>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__data">Online service</td>
+          <td class="table__data">
+            <abbr class="table__data-abbr" title="One dollar per month">$1/mo</abbr>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__data">Larger storage</td>
+          <td class="table__data">
+            <abbr class="table__data-abbr" title="Two dollars per month">$2/mo</abbr>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__data">Total (per month)</td>
+          <td class="table__data">
+            <abbr title="Twelve dollars per month">$12/mo</abbr>
+          </td>
+        </tr>
+      </table>
+
     </article>
+    <article class="thanks">
+      <img class="thanks__img" src="./assets/images/icon-thank-you.svg" aria-hidden="true" alt="icon">
+      <h2 class="thanks__title">Thank you!</h2>
+
+      <p class="thanks__p">Thanks for confirming your subscription! We hope you have fun 
+        using our platform. If you ever need support, please feel free 
+        to email us at support@loremgaming.com.</p>
+
+    </article>
+    <button class="content__btn-back">Go Back</button>
+    <button class="content__btn-next">Next Step</button>
   </main>
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>
